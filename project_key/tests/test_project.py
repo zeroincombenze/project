@@ -1,11 +1,12 @@
 # Copyright 2017 - 2018 Modoolar <info@modoolar.com>
 # License LGPLv3.0 or later (https://www.gnu.org/licenses/lgpl-3.0.en.html).
 
+from odoo.tools import mute_logger
+
 from .test_common import TestCommon
 
 
 class TestProject(TestCommon):
-
     def test_01_key(self):
         self.assertEqual(self.project_1.key, "OCA")
         self.assertEqual(self.project_2.key, "ODOO")
@@ -19,7 +20,7 @@ class TestProject(TestCommon):
 
     def test_03_name_search(self):
 
-        projects = self.Project.name_search('ODO')
+        projects = self.Project.name_search("ODO")
         self.assertEqual(len(projects), 1)
 
         non_odoo_projects = [
@@ -33,19 +34,20 @@ class TestProject(TestCommon):
         self.assertEqual(len(odoo_projects), 0)
 
     def test_04_name_search_empty(self):
-        projects = self.Project.name_search('')
+        projects = self.Project.name_search("")
         self.assertGreater(len(projects), 0)
 
     def test_05_name_onchange(self):
-        project = self.Project.new({'name': 'Software Development'})
+        project = self.Project.new({"name": "Software Development"})
         project._onchange_project_name()
-        self.assertEqual(project.key, 'SD')
+        self.assertEqual(project.key, "SD")
 
     def test_06_name_onchange(self):
         project = self.Project.new({})
         project._onchange_project_name()
-        self.assertEqual(project.key, '')
+        self.assertEqual(project.key, "")
 
+    @mute_logger("odoo.models.unlink")
     def test_07_delete(self):
         self.project_1.task_ids.unlink()
         self.project_1.unlink()
@@ -57,4 +59,13 @@ class TestProject(TestCommon):
 
     def test_08_generate_empty_project_key(self):
         empty_key = self.Project.generate_project_key(False)
-        self.assertEqual(empty_key, '')
+        self.assertEqual(empty_key, "")
+
+    def test_09_name_onchange_with_key(self):
+        project = self.Project.new({"name": "Software Development", "key": "TEST"})
+        project._onchange_project_name()
+        self.assertEqual(project.key, "TEST")
+
+    def test_10_generate_unique_key_with_counter(self):
+        project = self.Project.create({"name": "OCA"})
+        self.assertEqual(project.key, "OCA1")

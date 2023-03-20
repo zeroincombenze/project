@@ -19,6 +19,21 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: project_task_add_very_high
+#: model:ir.model.fields.selection,name:project_task_add_very_high.selection__project_task__priority__2
+msgid "High"
+msgstr ""
+
+#. module: project_task_add_very_high
+#: model:ir.model.fields,field_description:project_task_add_very_high.field_project_task__priority
+msgid "Priority"
+msgstr ""
+
+#. module: project_task_add_very_high
 #: model:ir.model,name:project_task_add_very_high.model_project_task
 msgid "Task"
 msgstr "Taak"
+
+#. module: project_task_add_very_high
+#: model:ir.model.fields.selection,name:project_task_add_very_high.selection__project_task__priority__3
+msgid "Very High"
+msgstr ""
