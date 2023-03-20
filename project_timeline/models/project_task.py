@@ -16,10 +16,10 @@ class ProjectTask(models.Model):
         """
         old_date_start = self.date_start
         super(ProjectTask, self)._onchange_user()
-        if old_date_start > self.date_start:
+        if old_date_start and old_date_start > self.date_start:
             self.date_start = old_date_start
 
     def update_date_end(self, stage_id):
         res = super(ProjectTask, self).update_date_end(stage_id)
-        res.pop('date_end')
+        res.pop('date_end', None)
         return res

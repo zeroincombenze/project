@@ -7,8 +7,8 @@
         <field name="inherit_id" ref="project.view_task_form2"/>
         <field name="arch" type="xml">
             <field name="name" position="before">
-                <field name="code" class="oe_inline"/>
-                <label string=" - " class="oe_inline"/>
+                <field name="code" class="oe_inline" readonly="True"/>
+                <span class="oe_inline"> - </span>
             </field>
         </field>
     </record>
@@ -47,5 +47,6 @@
             </field>
         </field>
     </record>
+
 </odoo>
 

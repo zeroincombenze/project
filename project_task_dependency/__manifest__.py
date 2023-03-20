@@ -3,8 +3,9 @@
 
 {
     'name': 'Project Task Dependencies',
-    'version': '11.0.1.0.1',
+    'version': '12.0.1.1.0',
     'category': 'Project',
+    'website': 'https://github.com/OCA/project',
     'summary': 'Enables to define dependencies (other tasks) of a task',
     'author': "Onestein,Odoo Community Association (OCA)",
     'license': 'AGPL-3',

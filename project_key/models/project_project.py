@@ -3,6 +3,7 @@
 
 from odoo import models, fields, api, _
 from odoo.osv import expression
+from odoo.tools import config
 
 
 class Project(models.Model):
@@ -15,7 +16,7 @@ class Project(models.Model):
     )
 
     key = fields.Char(
-        string='key',
+        string='Key',
         size=10,
         required=False,
         index=True,
@@ -30,6 +31,9 @@ class Project(models.Model):
     @api.onchange('name')
     def _onchange_project_name(self):
         for rec in self:
+            if rec.key:
+                continue
+
             if rec.name:
                 rec.key = self.generate_project_key(rec.name)
             else:
@@ -128,9 +132,16 @@ class Project(models.Model):
         return values
 
     def get_next_task_key(self):
+        test_project_key = self.env.context.get('test_project_key')
+        if config['test_enable'] and not test_project_key:
+            return False
         return self.sudo().task_key_sequence_id.next_by_id()
 
     def generate_project_key(self, text):
+        test_project_key = self.env.context.get('test_project_key')
+        if config['test_enable'] and not test_project_key:
+            return False
+
         if not text:
             return ''
 
@@ -140,7 +151,7 @@ class Project(models.Model):
 
         key = []
         for item in data:
-            key.append(item[0].upper())
+            key.append(item[:1].upper())
         return "".join(key)
 
     @api.multi

@@ -41,7 +41,7 @@ msgid "Cancelled"
 msgstr "Geannuleerd"
 
 #. module: project_task_default_stage
-#: model:ir.model.fields,field_description:project_task_default_stage.field_project_task_type_case_default
+#: model:ir.model.fields,field_description:project_task_default_stage.field_project_task_type__case_default
 msgid "Default for New Projects"
 msgstr "Standaard voor nieuwe projecten"
 
@@ -61,7 +61,7 @@ msgid "Done"
 msgstr "Gereed"
 
 #. module: project_task_default_stage
-#: model:ir.model.fields,help:project_task_default_stage.field_project_task_type_case_default
+#: model:ir.model.fields,help:project_task_default_stage.field_project_task_type__case_default
 msgid ""
 "If you check this field, this stage will be proposed by default on each new "
 "project. It will not assign this stage to existing projects."
@@ -87,12 +87,7 @@ msgid "Merge"
 msgstr "Merge"
 
 #. module: project_task_default_stage
-#: model:ir.model,name:project_task_default_stage.model_project_project
-msgid "Project"
-msgstr "Project"
-
-#. module: project_task_default_stage
-#: model:ir.ui.view,arch_db:project_task_default_stage.edit_project
+#: model_terms:ir.ui.view,arch_db:project_task_default_stage.edit_project
 msgid "Project Stages"
 msgstr "Project fases"
 
@@ -119,6 +114,20 @@ msgid "Task Stage"
 msgstr "Taak fase"
 
 #. module: project_task_default_stage
+#: model:ir.model.fields,field_description:project_task_default_stage.field_project_project__type_ids
+#, fuzzy
+msgid "Tasks Stages"
+msgstr "Taak fase"
+
+#. module: project_task_default_stage
 #: model:project.task.type,name:project_task_default_stage.project_tt_testing
 msgid "Testing"
 msgstr "Testen"
+
+#. module: project_task_default_stage
+#: model:ir.model,name:project_task_default_stage.model_project_project
+msgid "WBS element"
+msgstr ""
+
+#~ msgid "Project"
+#~ msgstr "Project"

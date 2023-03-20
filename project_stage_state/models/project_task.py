@@ -1,17 +1,13 @@
-# Daniel Reis, 2014
-# GNU Affero General Public License <http://www.gnu.org/licenses/>
+# Copyright 2014 Daniel Reis
+# License AGPL-3 - See http://www.gnu.org/licenses/agpl-3.0.html
 
-from odoo import models, fields
-
-
-_TASK_STATE = [
-    ('draft', 'New'),
-    ('open', 'In Progress'),
-    ('pending', 'Pending'),
-    ('done', 'Done'),
-    ('cancelled', 'Cancelled')]
+from odoo import fields, models
 
 
-class ProjectTaskType(models.Model):
-    _inherit = 'project.task.type'
-    state = fields.Selection(_TASK_STATE, 'State')
+class ProjectTask(models.Model):
+    """Added state in the Project Task."""
+
+    _inherit = 'project.task'
+
+    state = fields.Selection(
+        related='stage_id.state', store=True)
