@@ -25,7 +25,7 @@ import time
 
 from openerp.osv import orm, fields
 from openerp.tools.translate import _
-from openerp.addons.decimal_precision import decimal_precision as dp
+import decimal_precision as dp
 
 _logger = logging.getLogger(__name__)
 
