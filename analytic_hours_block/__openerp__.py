@@ -57,5 +57,5 @@ you can track and follow how much has been used.
         "hours_block_demo.xml",
     ],
     "active": False,
-    "installable": True
+    "installable": False
 }

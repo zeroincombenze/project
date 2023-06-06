@@ -26,5 +26,5 @@ Backport done By Yannick Buron.
         'account_analytic_analysis_recurring_cron.xml',
         'account_analytic_analysis_recurring_view.xml',
     ],
-    'installable': True,
+    'installable': False,
 }
