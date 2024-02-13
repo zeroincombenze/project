@@ -4,7 +4,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 11.0\n"
+"Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
 "PO-Revision-Date: 2019-07-12 15:43+0000\n"
 "Last-Translator: Maria Sparenberg <maria.sparenberg@gmx.net>\n"
@@ -17,17 +17,27 @@ msgstr ""
 "X-Generator: Weblate 3.7.1\n"
 
 #. module: project_key
-#: model:ir.model.fields,field_description:project_key.field_project_project_task_key_sequence_id
+#: model:ir.model.fields,field_description:project_key.field_project_project__key
+msgid "Key"
+msgstr "Nummerierungsmuster"
+
+#. module: project_key
+#: model:ir.model.fields,field_description:project_key.field_project_project__task_key_sequence_id
 msgid "Key Sequence"
 msgstr "Musterfolge"
 
 #. module: project_key
-#: sql_constraint:project.project:0
+#: model:ir.model,name:project_key.model_project_project
+msgid "Project"
+msgstr "Projekt"
+
+#. module: project_key
+#: model:ir.model.constraint,message:project_key.constraint_project_project_project_key_unique
 msgid "Project key must be unique"
 msgstr "Das Nummerierungsmuster für Projekte muss eindeutig sein."
 
 #. module: project_key
-#: code:addons/project_key/models/project_project.py:117
+#: code:addons/project_key/models/project_project.py:0
 #, python-format
 msgid "Project task sequence for project "
 msgstr "Aufgabennummerierung für Projekt "
@@ -38,25 +48,16 @@ msgid "Task"
 msgstr "Aufgabe"
 
 #. module: project_key
-#: sql_constraint:project.task:0
+#: model:ir.model.constraint,message:project_key.constraint_project_task_task_key_unique
 msgid "Task key must be unique!"
 msgstr "Aufgabennummerierung muss eindeutig sein!"
 
 #. module: project_key
-#: model:ir.model.fields,field_description:project_key.field_project_task_url
+#: model:ir.model.fields,field_description:project_key.field_project_task__url
 msgid "URL"
 msgstr "URL"
 
 #. module: project_key
-#: model:ir.model,name:project_key.model_project_project
-msgid "WBS element"
-msgstr ""
-
-#. module: project_key
-#: model:ir.model.fields,field_description:project_key.field_project_project_key
-#: model:ir.model.fields,field_description:project_key.field_project_task_key
+#: model:ir.model.fields,field_description:project_key.field_project_task__key
 msgid "key"
-msgstr "Nummerierungsmuster"
-
-#~ msgid "Project"
-#~ msgstr "Projekt"
+msgstr "Nummer"

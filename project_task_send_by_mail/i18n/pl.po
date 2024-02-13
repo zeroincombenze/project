@@ -84,13 +84,13 @@ msgid "${object.company_id.name} Task (Ref ${object.name or 'n/a'})"
 msgstr ""
 
 #. module: project_task_send_by_mail
-#: code:addons/project_task_send_by_mail/models/project.py:27
+#: code:addons/project_task_send_by_mail/models/project.py:0
 #, python-format
 msgid "Compose Email"
 msgstr ""
 
 #. module: project_task_send_by_mail
-#: model:ir.ui.view,arch_db:project_task_send_by_mail.view_task_form2
+#: model_terms:ir.ui.view,arch_db:project_task_send_by_mail.view_task_form2
 msgid "Send by Email"
 msgstr ""
 

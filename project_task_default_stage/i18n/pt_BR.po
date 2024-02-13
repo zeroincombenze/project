@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-11-05 03:36+0000\n"
-"PO-Revision-Date: 2018-06-20 13:13+0000\n"
+"PO-Revision-Date: 2019-08-26 16:01+0000\n"
 "Last-Translator: Rodrigo Macedo <rmsolucoeseminformatic4@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) (https://www.transifex.com/oca/"
 "teams/23907/pt_BR/)\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.0.1\n"
+"X-Generator: Weblate 3.8\n"
 
 #. module: project_task_default_stage
 #: model:project.task.type,name:project_task_default_stage.project_tt_analysis
@@ -44,7 +44,7 @@ msgid "Cancelled"
 msgstr "Cancelado"
 
 #. module: project_task_default_stage
-#: model:ir.model.fields,field_description:project_task_default_stage.field_project_task_type_case_default
+#: model:ir.model.fields,field_description:project_task_default_stage.field_project_task_type__case_default
 msgid "Default for New Projects"
 msgstr "Padrão para Novos Projetos"
 
@@ -64,7 +64,7 @@ msgid "Done"
 msgstr "Concluído"
 
 #. module: project_task_default_stage
-#: model:ir.model.fields,help:project_task_default_stage.field_project_task_type_case_default
+#: model:ir.model.fields,help:project_task_default_stage.field_project_task_type__case_default
 msgid ""
 "If you check this field, this stage will be proposed by default on each new "
 "project. It will not assign this stage to existing projects."
@@ -90,7 +90,12 @@ msgid "Merge"
 msgstr "Mesclar"
 
 #. module: project_task_default_stage
-#: model:ir.ui.view,arch_db:project_task_default_stage.edit_project
+#: model:ir.model,name:project_task_default_stage.model_project_project
+msgid "Project"
+msgstr "Projeto"
+
+#. module: project_task_default_stage
+#: model_terms:ir.ui.view,arch_db:project_task_default_stage.edit_project
 msgid "Project Stages"
 msgstr "Estágios do Projeto"
 
@@ -117,14 +122,11 @@ msgid "Task Stage"
 msgstr "Estágio do Projeto"
 
 #. module: project_task_default_stage
+#: model:ir.model.fields,field_description:project_task_default_stage.field_project_project__type_ids
+msgid "Tasks Stages"
+msgstr "Estágio da Tarefa"
+
+#. module: project_task_default_stage
 #: model:project.task.type,name:project_task_default_stage.project_tt_testing
 msgid "Testing"
 msgstr "Testando"
-
-#. module: project_task_default_stage
-#: model:ir.model,name:project_task_default_stage.model_project_project
-msgid "WBS element"
-msgstr ""
-
-#~ msgid "Project"
-#~ msgstr "Projeto"
