@@ -1,18 +1,19 @@
-[![Runbot Status](https://runbot.odoo-community.org/runbot/badge/flat/140/11.0.svg)](https://runbot.odoo-community.org/runbot/repo/github-com-oca-project-140)
-[![Build Status](https://travis-ci.org/OCA/project.svg?branch=11.0)](https://travis-ci.org/OCA/project)
-[![codecov](https://codecov.io/gh/OCA/project/branch/11.0/graph/badge.svg)](https://codecov.io/gh/OCA/project)
 
-Odoo Project & Service Management
-=================================
+[![Runboat](https://img.shields.io/badge/runboat-Try%20me-875A7B.png)](https://runboat.odoo-community.org/builds?repo=OCA/project&target_branch=15.0)
+[![Pre-commit Status](https://github.com/OCA/project/actions/workflows/pre-commit.yml/badge.svg?branch=15.0)](https://github.com/OCA/project/actions/workflows/pre-commit.yml?query=branch%3A15.0)
+[![Build Status](https://github.com/OCA/project/actions/workflows/test.yml/badge.svg?branch=15.0)](https://github.com/OCA/project/actions/workflows/test.yml?query=branch%3A15.0)
+[![codecov](https://codecov.io/gh/OCA/project/branch/15.0/graph/badge.svg)](https://codecov.io/gh/OCA/project)
+[![Translation Status](https://translation.odoo-community.org/widgets/project-15-0/-/svg-badge.svg)](https://translation.odoo-community.org/engage/project-15-0/?utm_source=widget)
 
-Find relevant modules for service business processes or companies.
+<!-- /!\ do not modify above this line -->
 
-This project aims to extend Odoo on contract management features, such as:
+# project
 
-  * Manage sold hours in advance
-  * Invoice on contract basis
-  * ...
+TODO: add repo description.
 
+<!-- /!\ do not modify below this line -->
+
+<!-- prettier-ignore-start -->
 
 [//]: # (addons)
 
@@ -20,40 +21,56 @@ Available addons
 ----------------
 addon | version | maintainers | summary
 --- | --- | --- | ---
-[project_category](project_category/) | 11.0.1.1.0 |  | Project Types
-[project_department](project_department/) | 11.0.1.0.0 |  | Project Department Categorization
-[project_description](project_description/) | 11.0.1.0.0 |  | Add a description to projects
-[project_hr](project_hr/) | 11.0.1.0.0 | [![pedrobaeza](https://github.com/pedrobaeza.png?size=30px)](https://github.com/pedrobaeza) | Link HR with project
-[project_key](project_key/) | 11.0.1.0.1 |  | Module decorates projects and tasks with ``key`` field
-[project_list](project_list/) | 11.0.1.0.0 |  | Projects list view
-[project_milestone](project_milestone/) | 11.0.1.0.0 | [![patrickrwilson](https://github.com/patrickrwilson.png?size=30px)](https://github.com/patrickrwilson) | Project Milestones
-[project_risk](project_risk/) | 11.0.1.0.1 |  | MOR risk management method
-[project_stage_closed](project_stage_closed/) | 11.0.1.0.0 |  | Make the Closed flag on Task Stages available without installing sale_service
-[project_stage_state](project_stage_state/) | 11.0.1.0.0 |  | Restore State attribute removed from Project Stages in 8.0
-[project_task_add_very_high](project_task_add_very_high/) | 11.0.1.0.0 |  | Adds extra options 'High' and 'Very High' on tasks
-[project_task_code](project_task_code/) | 11.0.1.1.0 |  | Sequential Code for Tasks
-[project_task_default_stage](project_task_default_stage/) | 11.0.1.0.0 |  | Recovery default task stage projects from v8
-[project_task_dependency](project_task_dependency/) | 11.0.1.0.2 |  | Enables to define dependencies (other tasks) of a task
-[project_task_digitized_signature](project_task_digitized_signature/) | 11.0.1.0.0 |  | Project Task Digitized Signature
-[project_task_material](project_task_material/) | 11.0.1.0.0 |  | Record products spent in a Task
-[project_task_material_stock](project_task_material_stock/) | 11.0.1.0.2 |  | Create stock and analytic moves from record products spent in a Task
-[project_task_material_with_sale_timesheet](project_task_material_with_sale_timesheet/) | 11.0.1.0.1 |  | Add compatibility between project_task_material_stockand sale_timesheet module
-[project_task_pull_request](project_task_pull_request/) | 11.0.1.0.0 |  | Adds a field for a PR URI to project tasks
-[project_task_send_by_mail](project_task_send_by_mail/) | 11.0.1.0.0 |  | Send task report by email
-[project_task_type_active](project_task_type_active/) | 11.0.1.0.0 |  | Adds active field on project task type
-[project_template](project_template/) | 11.0.1.0.1 | [![patrickrwilson](https://github.com/patrickrwilson.png?size=30px)](https://github.com/patrickrwilson) | Project Templates
-[project_timeline](project_timeline/) | 11.0.1.1.0 |  | Timeline view for projects
-[project_timeline_critical_path](project_timeline_critical_path/) | 11.0.1.0.0 |  | Highlight the critical paths of your projects.
-[project_timeline_hr_timesheet](project_timeline_hr_timesheet/) | 11.0.1.0.0 |  | Shows the progress of tasks on the timeline view.
-[project_timeline_task_dependency](project_timeline_task_dependency/) | 11.0.1.0.0 |  | Render arrows between dependencies.
-[project_timesheet_time_control](project_timesheet_time_control/) | 11.0.1.2.0 |  | Project timesheet time control
-[project_wbs](project_wbs/) | 11.0.1.0.0 |  | Project Work Breakdown Structure
+[project_administrator_restricted_visibility](project_administrator_restricted_visibility/) | 15.0.1.0.0 |  | Adds a 'Project Administrator' access group with restricted visibility to 'Projects'
+[project_department](project_department/) | 15.0.1.0.1 |  | Project Department Categorization
+[project_duplicate_subtask](project_duplicate_subtask/) | 15.0.1.0.0 |  | The module adds an action to duplicate tasks with the child subtasks
+[project_forecast_line](project_forecast_line/) | 15.0.1.3.3 |  | Project Forecast Lines
+[project_forecast_line_bokeh_chart](project_forecast_line_bokeh_chart/) | 15.0.1.0.2 |  | Project Forecast Lines Bokeh Chart
+[project_forecast_line_holidays_public](project_forecast_line_holidays_public/) | 15.0.1.1.0 |  | Project Forecast Lines taking public holidays into account
+[project_hr](project_hr/) | 15.0.1.0.0 | [![pedrobaeza](https://github.com/pedrobaeza.png?size=30px)](https://github.com/pedrobaeza) | Link HR with project
+[project_list](project_list/) | 15.0.2.0.0 |  | Projects list view
+[project_milestone](project_milestone/) | 15.0.1.0.1 | [![patrickrwilson](https://github.com/patrickrwilson.png?size=30px)](https://github.com/patrickrwilson) | Project Milestones
+[project_parent_task_filter](project_parent_task_filter/) | 15.0.1.1.0 |  | Add a filter to show the parent tasks
+[project_purchase_analytic_global](project_purchase_analytic_global/) | 15.0.1.0.1 | [![yankinmax](https://github.com/yankinmax.png?size=30px)](https://github.com/yankinmax) | Project - Create Purchase Orders with Analytic Account
+[project_role](project_role/) | 15.0.1.0.2 | [![alexey-pelykh](https://github.com/alexey-pelykh.png?size=30px)](https://github.com/alexey-pelykh) | Project role-based roster
+[project_sequence](project_sequence/) | 15.0.0.2.2 | [![yajo](https://github.com/yajo.png?size=30px)](https://github.com/yajo) [![anddago78](https://github.com/anddago78.png?size=30px)](https://github.com/anddago78) | Add a sequence field to projects, filled automatically
+[project_stage_mgmt](project_stage_mgmt/) | 15.0.1.0.0 | [![DavidJForgeFlow](https://github.com/DavidJForgeFlow.png?size=30px)](https://github.com/DavidJForgeFlow) | Allows to assign and create task stages on project creation wizard
+[project_status](project_status/) | 15.0.1.0.0 | [![patrickrwilson](https://github.com/patrickrwilson.png?size=30px)](https://github.com/patrickrwilson) | Project Status
+[project_stock](project_stock/) | 15.0.1.0.6 | [![victoralmau](https://github.com/victoralmau.png?size=30px)](https://github.com/victoralmau) | Project Stock
+[project_stock_product_set](project_stock_product_set/) | 15.0.1.0.2 | [![victoralmau](https://github.com/victoralmau.png?size=30px)](https://github.com/victoralmau) | Project Stock Product Set
+[project_stock_request](project_stock_request/) | 15.0.1.0.0 |  | Create stock requests from a projects and project tasks
+[project_task_add_very_high](project_task_add_very_high/) | 15.0.1.0.0 | [![astirpe](https://github.com/astirpe.png?size=30px)](https://github.com/astirpe) | Adds extra options 'High' and 'Very High' on tasks
+[project_task_code](project_task_code/) | 15.0.1.0.4 |  | Sequential Code for Tasks
+[project_task_default_stage](project_task_default_stage/) | 15.0.1.0.1 |  | Recovery default task stages for projects from v8
+[project_task_dependency](project_task_dependency/) | 15.0.1.0.0 | [![astirpe](https://github.com/astirpe.png?size=30px)](https://github.com/astirpe) | Enables to define dependencies (other tasks) of a task
+[project_task_description_template](project_task_description_template/) | 15.0.1.0.0 |  | Add a description template to project tasks
+[project_task_material](project_task_material/) | 15.0.1.0.0 |  | Record products spent in a Task
+[project_task_milestone](project_task_milestone/) | 15.0.1.0.0 | [![mantux11](https://github.com/mantux11.png?size=30px)](https://github.com/mantux11) | Project Task Milestones
+[project_task_personal_stage_auto_fold](project_task_personal_stage_auto_fold/) | 15.0.1.0.3 |  | Moves task to the first fold personal stage when done
+[project_task_pull_request](project_task_pull_request/) | 15.0.1.0.1 |  | Adds a field for a PR URI to project tasks
+[project_task_stage_state](project_task_stage_state/) | 15.0.1.0.1 |  | Restore State attribute removed from Project Stages in 8.0
+[project_template](project_template/) | 15.0.1.0.0 | [![patrickrwilson](https://github.com/patrickrwilson.png?size=30px)](https://github.com/patrickrwilson) | Project Templates
+[project_template_milestone](project_template_milestone/) | 15.0.1.0.0 | [![patrickrwilson](https://github.com/patrickrwilson.png?size=30px)](https://github.com/patrickrwilson) | Adds function to copy of milestones when creating a project from template
+[project_timeline](project_timeline/) | 15.0.1.2.1 |  | Timeline view for projects
+[project_timeline_hr_timesheet](project_timeline_hr_timesheet/) | 15.0.1.0.0 |  | Shows the progress of tasks on the timeline view.
+[project_timesheet_time_control](project_timesheet_time_control/) | 15.0.1.1.1 | [![ernestotejeda](https://github.com/ernestotejeda.png?size=30px)](https://github.com/ernestotejeda) | Project timesheet time control
+[project_type](project_type/) | 15.0.1.0.1 |  | Project Types
+[project_wbs](project_wbs/) | 15.0.1.0.0 |  | Apply Work Breakdown Structure
+[sale_project_copy_tasks](sale_project_copy_tasks/) | 15.0.1.0.1 | [![shide](https://github.com/shide.png?size=30px)](https://github.com/shide) [![EmilioPascual](https://github.com/EmilioPascual.png?size=30px)](https://github.com/EmilioPascual) | Copy tasks into sale order's project
 
 [//]: # (end addons)
 
+<!-- prettier-ignore-end -->
+
+## Licenses
+
+This repository is licensed under [AGPL-3.0](LICENSE).
+
+However, each module can have a totally different license, as long as they adhere to Odoo Community Association (OCA)
+policy. Consult each module's `__manifest__.py` file, which contains a `license` key
+that explains its license.
 
 ----
-
-OCA, or the [Odoo Community Association](http://odoo-community.org/), is a nonprofit organization whose
-mission is to support the collaborative development of Odoo features and
-promote its widespread use.
+OCA, or the [Odoo Community Association](http://odoo-community.org/), is a nonprofit
+organization whose mission is to support the collaborative development of Odoo features
+and promote its widespread use.

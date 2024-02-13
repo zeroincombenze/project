@@ -1,12 +1,11 @@
-# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
-from odoo import models, fields, api
+# License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
+from odoo import api, fields, models
 
 
 class Project(models.Model):
-    _inherit = 'project.project'
+    _inherit = "project.project"
 
-    is_template = fields.Boolean(string="Is Template",
-                                 copy=False)
+    is_template = fields.Boolean(copy=False)
 
     # CREATE A PROJECT FROM A TEMPLATE AND OPEN THE NEWLY CREATED PROJECT
     def create_project_from_template(self):
@@ -14,10 +13,9 @@ class Project(models.Model):
             new_name = self.name.replace(" (TEMPLATE)", " (COPY)")
         else:
             new_name = self.name + " (COPY)"
-        new_project = self.copy(default={'name': new_name,
-                                         'active': True,
-                                         'total_planned_hours': 0.0,
-                                         'alias_name': False})
+        new_project = self.copy(
+            default={"name": new_name, "active": True, "alias_name": False}
+        )
 
         # SINCE THE END DATE DOESN'T COPY OVER ON TASKS
         # (Even when changed to copy=true), POPULATE END DATES ON THE TASK
@@ -28,16 +26,16 @@ class Project(models.Model):
 
         # OPEN THE NEWLY CREATED PROJECT FORM
         return {
-            'view_type': 'form',
-            'view_mode': 'form',
-            'res_model': 'project.project',
-            'target': 'current',
-            'res_id': new_project.id,
-            'type': 'ir.actions.act_window'
+            "view_type": "form",
+            "view_mode": "form",
+            "res_model": "project.project",
+            "target": "current",
+            "res_id": new_project.id,
+            "type": "ir.actions.act_window",
         }
 
     # ADD "(TEMPLATE)" TO THE NAME WHEN PROJECT IS MARKED AS A TEMPLATE
-    @api.onchange('is_template')
+    @api.onchange("is_template")
     def on_change_is_template(self):
         # Add "(TEMPLATE)" to the Name if is_template == true
         # if self.name is needed for creating projects via configuration menu

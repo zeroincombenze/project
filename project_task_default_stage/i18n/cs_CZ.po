@@ -42,7 +42,7 @@ msgid "Cancelled"
 msgstr "Zrušeno"
 
 #. module: project_task_default_stage
-#: model:ir.model.fields,field_description:project_task_default_stage.field_project_task_type_case_default
+#: model:ir.model.fields,field_description:project_task_default_stage.field_project_task_type__case_default
 msgid "Default for New Projects"
 msgstr "Výchozí nastavení pro nové projekty"
 
@@ -62,7 +62,7 @@ msgid "Done"
 msgstr "Hotovo"
 
 #. module: project_task_default_stage
-#: model:ir.model.fields,help:project_task_default_stage.field_project_task_type_case_default
+#: model:ir.model.fields,help:project_task_default_stage.field_project_task_type__case_default
 msgid ""
 "If you check this field, this stage will be proposed by default on each new "
 "project. It will not assign this stage to existing projects."
@@ -88,7 +88,7 @@ msgid "Merge"
 msgstr "Jít"
 
 #. module: project_task_default_stage
-#: model:ir.ui.view,arch_db:project_task_default_stage.edit_project
+#: model_terms:ir.ui.view,arch_db:project_task_default_stage.edit_project
 msgid "Project Stages"
 msgstr "Projektové fáze"
 
@@ -101,8 +101,8 @@ msgstr "Projektové fáze"
 #: model:project.task.type,legend_done:project_task_default_stage.project_tt_merge
 #: model:project.task.type,legend_done:project_task_default_stage.project_tt_specification
 #: model:project.task.type,legend_done:project_task_default_stage.project_tt_testing
-msgid "Ready for Next Stage"
-msgstr "Připraveno pro další fázi"
+msgid "Ready"
+msgstr ""
 
 #. module: project_task_default_stage
 #: model:project.task.type,name:project_task_default_stage.project_tt_specification
@@ -112,6 +112,12 @@ msgstr "Specifikace"
 #. module: project_task_default_stage
 #: model:ir.model,name:project_task_default_stage.model_project_task_type
 msgid "Task Stage"
+msgstr "Úkolová fáze"
+
+#. module: project_task_default_stage
+#: model:ir.model.fields,field_description:project_task_default_stage.field_project_project__type_ids
+#, fuzzy
+msgid "Tasks Stages"
 msgstr "Úkolová fáze"
 
 #. module: project_task_default_stage
@@ -126,3 +132,6 @@ msgstr ""
 
 #~ msgid "Project"
 #~ msgstr "Projekt"
+
+#~ msgid "Ready for Next Stage"
+#~ msgstr "Připraveno pro další fázi"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 11.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2019-07-12 15:43+0000\n"
+"PO-Revision-Date: 2019-10-11 10:37+0000\n"
 "Last-Translator: Maria Sparenberg <maria.sparenberg@gmx.net>\n"
 "Language-Team: none\n"
 "Language: de\n"
@@ -14,31 +14,36 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.7.1\n"
+"X-Generator: Weblate 3.8\n"
 
 #. module: project_hr
-#: model:ir.model.fields,field_description:project_hr.field_project_task_allowed_hr_category_ids
+#: model:ir.model.fields,field_description:project_hr.field_project_task__allowed_hr_category_ids
 msgid "Allowed HR categories"
 msgstr "Erlaubte HR Kategorien"
 
 #. module: project_hr
-#: model:ir.model.fields,field_description:project_hr.field_project_task_allowed_user_ids
+#: model:ir.model.fields,field_description:project_hr.field_project_task__allowed_assigned_user_ids
 msgid "Allowed users"
 msgstr "Erlaubte Benutzer"
 
 #. module: project_hr
-#: model:ir.model.fields,field_description:project_hr.field_project_project_hr_category_ids
-#: model:ir.model.fields,field_description:project_hr.field_project_task_hr_category_ids
+#: model:ir.model,name:project_hr.model_hr_employee
+msgid "Employee"
+msgstr "Mitarbeiter"
+
+#. module: project_hr
+#: model:ir.model.fields,field_description:project_hr.field_project_project__hr_category_ids
+#: model:ir.model.fields,field_description:project_hr.field_project_task__hr_category_ids
 msgid "Employee Categories"
 msgstr "Mitarbeiter-Kategorien"
 
 #. module: project_hr
-#: model:ir.model.fields,field_description:project_hr.field_res_users_hr_category_ids
+#: model:ir.model.fields,field_description:project_hr.field_res_users__hr_category_ids
 msgid "HR categories"
 msgstr "HR Kategorien"
 
 #. module: project_hr
-#: model:ir.model.fields,help:project_hr.field_project_project_hr_category_ids
+#: model:ir.model.fields,help:project_hr.field_project_project__hr_category_ids
 msgid ""
 "Here you can link the project to several employee categories, that will be "
 "the allowed in tasks."
@@ -47,7 +52,7 @@ msgstr ""
 "diese können in Aufgaben ausgewählt werden."
 
 #. module: project_hr
-#: model:ir.model.fields,help:project_hr.field_project_task_hr_category_ids
+#: model:ir.model.fields,help:project_hr.field_project_task__hr_category_ids
 msgid ""
 "Here you can select the employee category suitable to perform this task, "
 "limiting the selectable users to be assigned to those that belongs to that "
@@ -57,7 +62,7 @@ msgstr ""
 "dürfen dann nur Mitarbeitern dieser Kategorie zugewiesen werden."
 
 #. module: project_hr
-#: model:ir.model.fields,field_description:project_hr.field_project_task_employee_id
+#: model:ir.model.fields,field_description:project_hr.field_project_task__employee_ids
 msgid "Linked employee"
 msgstr "Zugehöriger Mitarbeiter"
 
@@ -67,7 +72,7 @@ msgid "Task"
 msgstr "Aufgabe"
 
 #. module: project_hr
-#: model:ir.model.fields,help:project_hr.field_project_task_allowed_hr_category_ids
+#: model:ir.model.fields,help:project_hr.field_project_task__allowed_hr_category_ids
 msgid ""
 "Technical field for computing allowed employee categories according "
 "categories at project level."
@@ -76,7 +81,7 @@ msgstr ""
 "Mitarbeiter-Kategorien, die auf Projektebene festgelegt wurden."
 
 #. module: project_hr
-#: model:ir.model.fields,help:project_hr.field_project_task_allowed_user_ids
+#: model:ir.model.fields,help:project_hr.field_project_task__allowed_assigned_user_ids
 msgid ""
 "Technical field for computing allowed users according employee category."
 msgstr ""
@@ -84,7 +89,7 @@ msgstr ""
 "Mitarbeiter, die zur Mitarbeiter-Kategorie gehören."
 
 #. module: project_hr
-#: model:ir.model.fields,help:project_hr.field_res_users_hr_category_ids
+#: model:ir.model.fields,help:project_hr.field_res_users__hr_category_ids
 msgid ""
 "Technical field for computing dynamically employee categories linked to the "
 "user in the current company."
@@ -103,7 +108,7 @@ msgid "WBS element"
 msgstr ""
 
 #. module: project_hr
-#: code:addons/project_hr/models/project_task.py:89
+#: code:addons/project_hr/models/project_task.py:0
 #, python-format
 msgid "You can't assign a category that is not allowed at project level."
 msgstr ""
@@ -111,7 +116,7 @@ msgstr ""
 "Projektebene nicht erlaubt wurde."
 
 #. module: project_hr
-#: code:addons/project_hr/models/project_task.py:78
+#: code:addons/project_hr/models/project_task.py:0
 #, python-format
 msgid ""
 "You can't assign a user not belonging to the selected employee category."
